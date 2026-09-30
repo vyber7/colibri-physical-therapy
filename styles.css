@@ -80,8 +80,8 @@ nav { height: 76px; display: flex; align-items: center; justify-content: space-b
 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--leaf); }
 
 .services { padding: 120px 0; }
-.section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: end; margin-bottom: 64px; }
-.section-heading p { color: var(--muted); max-width: 520px; }
+.section-heading { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 64px; }
+.section-heading p { color: var(--muted); max-width: 650px; }
 .service-list { border-top: 1px solid var(--line); }
 .service { display: grid; grid-template-columns: 90px 1fr 1.2fr 48px; gap: 30px; align-items: center; padding: 28px 10px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .2s, background .2s; }
 .service:hover { padding-inline: 22px; background: white; }

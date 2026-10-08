@@ -2,5 +2,5 @@
 // Example: for https://cal.com/colibri-pt/initial-evaluation, use
 // calLink: 'colibri-pt/initial-evaluation'
 window.COLIBRI_SCHEDULING = window.COLIBRI_SCHEDULING || {
-  calLink: 'colibri-physical-therapy/initial-visit'
+  calLink: 'colibri-physical-therapy/evaluation'
 };

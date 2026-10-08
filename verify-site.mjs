@@ -9,12 +9,19 @@ for (const viewport of [{name:'desktop', width:1440, height:1000}, {name:'mobile
   await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle' });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
   if (overflow) errors.push(`${viewport.name}: horizontal overflow`);
-  await page.locator('.schedule-open:visible').first().click();
-  if (!(await page.locator('#scheduler-setup').isVisible())) errors.push(`${viewport.name}: scheduling fallback not visible`);
-  if (!(await page.locator('a[href^="tel:"]').last().isVisible())) errors.push(`${viewport.name}: scheduling phone fallback not visible`);
+  await page.locator('.contact-open:visible').first().click();
+  if (!(await page.locator('#contact-form').isVisible())) errors.push(`${viewport.name}: visit request form not visible`);
+  if (await page.locator('#cal-booking').count()) errors.push(`${viewport.name}: old calendar still present`);
+  const formChecks = await page.evaluate(() => ({
+    invalid: !document.querySelector('#contact-form').checkValidity(),
+    focused: document.activeElement.id === 'contact-name',
+    topReachable: document.querySelector('.modal-card').getBoundingClientRect().top >= 0,
+    noOverflow: document.querySelector('#contact-modal').scrollWidth <= window.innerWidth
+  }));
+  if (Object.values(formChecks).some(value => !value)) errors.push(`${viewport.name}: form validation, focus, or modal layout failed`);
   await page.locator('.modal .close').click();
-  if (await page.locator('#schedule-modal').isVisible()) errors.push(`${viewport.name}: modal did not close`);
-  console.log(`${viewport.name}: layout and scheduling flow passed`);
+  if (await page.locator('#contact-modal').isVisible()) errors.push(`${viewport.name}: modal did not close`);
+  console.log(`${viewport.name}: layout and visit request flow passed`);
   await page.close();
 }
 await browser.close();

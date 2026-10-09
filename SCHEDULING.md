@@ -33,12 +33,12 @@ Reply to this email to discuss the visit. Send the scheduling link after the ini
 
 ```js
 window.COLIBRI_CONTACT = window.COLIBRI_CONTACT || {
-  email: 'contact@keysphysicaltherapy.com',
+  email: "contact@keysphysicaltherapy.com",
   emailjs: {
-    publicKey: 'YOUR_PUBLIC_KEY',
-    serviceId: 'YOUR_SERVICE_ID',
-    templateId: 'YOUR_TEMPLATE_ID'
-  }
+    publicKey: "YOUR_PUBLIC_KEY",
+    serviceId: "YOUR_SERVICE_ID",
+    templateId: "YOUR_TEMPLATE_ID",
+  },
 };
 ```
 
@@ -70,6 +70,7 @@ With EmailJS configured, the button becomes **Send request**. The website sends 
 Test validation, desktop/mobile layout, keyboard access, Escape and backdrop closing, editing an email draft, failure/retry, and duplicate-click prevention. Browser mock responses verify the form behavior only. After configuration, make an authorized live test request and verify the notification arrives at the clinic, Reply To targets the visitor, the acknowledgment arrives, and no appointment is automatically booked.
 
 Official references:
+
 - https://www.emailjs.com/docs/tutorial/creating-contact-form/
 - https://www.emailjs.com/docs/rest-api/send/
 - https://www.emailjs.com/docs/user-guide/auto-reply/

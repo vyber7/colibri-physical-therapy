@@ -1,8 +1,6 @@
 # Contact first, then schedule
 
-The website's **Request a visit** buttons open a short form. Colibri receives the visitor's contact details, discusses goals, service area, and pricing, then emails a scheduling link. Returning patients can receive the scheduling link directly.
-
-The website no longer embeds Cal.com or loads [`scheduling-config.js`](scheduling-config.js). That file is retained for reference with an empty `calLink`. Confirm the clinic's current scheduling link before sharing it with a patient; the website does not supply or validate one.
+The website's **Request a visit** buttons open a short form. Colibri receives the visitor's contact details, discusses goals, service area, and pricing, then schedules a visit.
 
 ## Form fields and configuration
 

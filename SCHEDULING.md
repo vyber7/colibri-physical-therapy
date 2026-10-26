@@ -57,7 +57,7 @@ Create a second template with **To Email** set to `{{email}}`, **Reply To** set 
 ```text
 Hi {{name}},
 
-Thanks for reaching out to Colibri Physical Therapy. We received your request and will contact you to discuss your visit and next steps. After we connect, we'll email you a link to schedule.
+Thanks for reaching out to Colibri Physical Therapy. We received your request and will contact you to discuss your visit and next steps. After we connect, we'll schedule an appointment.
 
 Colibri Physical Therapy
 contact@keysphysicaltherapy.com

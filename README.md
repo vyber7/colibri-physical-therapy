@@ -25,6 +25,7 @@ Node.js is only needed for the optional browser checks below.
 - [`contact-config.js`](contact-config.js): Contact email and public EmailJS identifiers.
 - [`scheduling-config.js`](scheduling-config.js): Retained Cal.com configuration; the current website does not load this file or embed a booking calendar.
 - [`assets/`](assets/): Brand mark, hero image, therapist portrait, and favicon.
+  The page serves `profile-pic.webp`, a compressed portrait with the original dimensions and transparency. Keep `profile-pic.png` as the source for future edits.
 - [`SCHEDULING.md`](SCHEDULING.md): EmailJS templates, acknowledgment setup, and delivery verification.
 - [`verify-site.mjs`](verify-site.mjs): Playwright checks for desktop and mobile layouts and the visit request dialog.
 - [`artifacts/`](artifacts/): Saved screenshots for visual reference.
